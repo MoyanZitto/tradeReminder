@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>tradeReminder</class>
+ <widget class="QMainWindow" name="tradeReminder">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>951</width>
+    <height>694</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>tradeReminder</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="1" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QLineEdit" name="userNameEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>91</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="sizeIncrement">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="dragEnabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="changeUserButton">
+          <property name="text">
+           <string>使用这个用户</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="3" column="2">
+       <widget class="QTextBrowser" name="resShowBrowser"/>
+      </item>
+      <item row="5" column="2" alignment="Qt::AlignHCenter">
+       <widget class="QPushButton" name="exportDataButton">
+        <property name="text">
+         <string>导出数据</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="Line" name="line_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="3" alignment="Qt::AlignHCenter">
+       <widget class="QPushButton" name="showAgentsButton">
+        <property name="text">
+         <string>查看机构库</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QTextEdit" name="agentEdit"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="Line" name="line_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLabel" name="infoLabel">
+        <property name="text">
+         <string>当前用户:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="refreshButton">
+        <property name="text">
+         <string>整理/刷新</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0" alignment="Qt::AlignHCenter">
+       <widget class="QPushButton" name="importDataButton">
+        <property name="text">
+         <string>导入数据</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QTextEdit" name="inputZoneEdit"/>
+      </item>
+      <item row="6" column="3" alignment="Qt::AlignHCenter">
+       <widget class="QPushButton" name="addToLibButton">
+        <property name="text">
+         <string>添加到机构库</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="2" alignment="Qt::AlignHCenter">
+       <widget class="QPushButton" name="copyResButton">
+        <property name="text">
+         <string>复制结果</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>importDataButton</sender>
+   <signal>clicked()</signal>
+   <receiver>tradeReminder</receiver>
+   <slot>importData()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>153</x>
+     <y>635</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>643</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>refreshButton</sender>
+   <signal>clicked()</signal>
+   <receiver>tradeReminder</receiver>
+   <slot>doRefresh()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>323</x>
+     <y>343</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>351</x>
+     <y>372</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>exportDataButton</sender>
+   <signal>clicked()</signal>
+   <receiver>tradeReminder</receiver>
+   <slot>exportData()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>523</x>
+     <y>639</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>596</x>
+     <y>647</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showAgentsButton</sender>
+   <signal>clicked()</signal>
+   <receiver>tradeReminder</receiver>
+   <slot>showAgents()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>813</x>
+     <y>633</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>901</x>
+     <y>634</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addToLibButton</sender>
+   <signal>clicked()</signal>
+   <receiver>tradeReminder</receiver>
+   <slot>addToLib()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>787</x>
+     <y>657</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>713</x>
+     <y>657</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>changeUserButton</sender>
+   <signal>clicked()</signal>
+   <receiver>tradeReminder</receiver>
+   <slot>useUser()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>144</x>
+     <y>44</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>243</x>
+     <y>41</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>copyResButton</sender>
+   <signal>clicked()</signal>
+   <receiver>tradeReminder</receiver>
+   <slot>copyRes()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>505</x>
+     <y>653</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>400</x>
+     <y>657</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>importData()</slot>
+  <slot>doRefresh()</slot>
+  <slot>exportData()</slot>
+  <slot>showAgents()</slot>
+  <slot>addToLib()</slot>
+  <slot>useUser()</slot>
+  <slot>copyRes()</slot>
+ </slots>
+</ui>
